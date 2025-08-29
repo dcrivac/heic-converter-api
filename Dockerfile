@@ -4,7 +4,7 @@ RUN apk add --no-cache vips vips-dev gcc g++ make python3
 
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --only=production
+RUN npm install --only=production
 
 COPY . .
 
